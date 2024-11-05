@@ -10,7 +10,7 @@ const int brakeSensorPin = A0;  // 브레이크 센서 핀
 const int accelSensorPin = A1;  // 악셀 센서 핀
 const int chipSelect = 4;       // SD 카드 모듈 CS 핀
 
-// LCD 설정 (I2C 주소 0x27, 20x4 크기)
+// LCD 설정 (I2C 주소 0x27, 20x4 크기) - 주소 확인 필수
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
 // 마지막 초기화 날짜
@@ -42,7 +42,7 @@ void setup() {
   }
 
   // LCD 초기화
-  lcd.init();
+  lcd.begin(20, 4);    // LCD의 열과 행을 설정합니다.
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("System Starting...");
@@ -106,13 +106,8 @@ void loop() {
     Serial.println("log.txt 파일 열기 실패");
   }
 
-  // SQW 핀 신호 읽기
-  int sqwState = digitalRead(sqwPin);
-  Serial.print("SQW 핀 상태: ");
-  Serial.println(sqwState == HIGH ? "HIGH" : "LOW");
-
   // LCD에 데이터 표시
-  lcd.clear();
+  lcd.clear();  // 깜박거림 방지를 위해 조건부로 변경 가능
   lcd.setCursor(0, 0);
   lcd.print("Brake: " + String(brakeValue));
   lcd.setCursor(0, 1);
