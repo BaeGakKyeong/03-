@@ -5,11 +5,10 @@
 #include <LiquidCrystal_I2C.h>  // I2C LCD 제어 라이브러리
 
 // RTC, SD 카드, LCD 설정
-RTC_DS1307 rtc;
+RTC_DS3231 rtc;
 const int brakeSensorPin = A0;  // 브레이크 센서 핀
 const int accelSensorPin = A1;  // 악셀 센서 핀
 const int chipSelect = 4;       // SD 카드 모듈 CS 핀
-const int sqwPin = 2;           // SQW 핀 (RTC 출력 핀)
 
 // LCD 설정 (I2C 주소 0x27, 20x4 크기)
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -34,9 +33,6 @@ void setup() {
     Serial.println("RTC 정상 실행 중");
   }
 
-  // 1Hz 신호 설정
-  rtc.writeSqwPinMode(DS1307_SquareWave1HZ);
-
   // SD 카드 초기화
   if (!SD.begin(chipSelect)) {
     Serial.println("SD 카드 초기화 실패!");
@@ -50,9 +46,6 @@ void setup() {
   lcd.backlight();
   lcd.setCursor(0, 0);
   lcd.print("System Starting...");
-
-  // SQW 핀을 입력으로 설정
-  pinMode(sqwPin, INPUT);
 
   // 마지막 초기화 날짜 읽기
   File dateFile = SD.open("lastInitDate.txt", FILE_READ);
