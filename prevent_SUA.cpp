@@ -25,13 +25,9 @@ void setup() {
     while (1);  // RTC 오류 시 멈춤
   }
 
-  // RTC가 실행 중인지 확인
-  if (!rtc.isrunning()) {
-    Serial.println("RTC 실행 중이 아님, 기본 시간 설정 중...");
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));  // 기본 시간 설정
-  } else {
-    Serial.println("RTC 정상 실행 중");
-  }
+  // 기본 시간 설정
+  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));  // 기본 시간 설정
+  Serial.println("RTC 정상 실행 중");
 
   // SD 카드 초기화
   if (!SD.begin(chipSelect)) {
@@ -102,6 +98,7 @@ void loop() {
     dataFile.print(", Accelerator: ");
     dataFile.println(accelValue);
     dataFile.close();
+    Serial.println("데이터가 log.txt에 기록되었습니다.");
   } else {
     Serial.println("log.txt 파일 열기 실패");
   }
