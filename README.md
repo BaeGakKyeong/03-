@@ -12,6 +12,8 @@
 - [4. 목표](#목표)
 - [5. 내용](#내용)
 - [6. 구현 방법](#구현방법)
+- [7. 일정 및 팀원 역할](#일정_및_팀원역할)
+- [8. 참고문헌](#참고문헌)
 
 
 ## 연구배경_및_필요성
@@ -136,6 +138,7 @@ SCL 핀: Arduino Mega의  21번 핀에 연결
 실제 회로도
 
 ![IMG_9837](https://github.com/user-attachments/assets/601eb97a-922f-4653-b438-2a69d09d7db9)
+<구현 회로도>
 
 작동 영상
 
@@ -145,4 +148,34 @@ https://github.com/user-attachments/assets/0fdd80c9-c11d-4a1a-8cf7-d808dc06f086
 SD카드에 저장된 모습
 
 ![IMG_9834](https://github.com/user-attachments/assets/810f51f4-d64d-47e6-aaa0-847689e176b6)
+<SD카드>
+
+
+
+## 일정_및_팀원역할
+
+![IMG_9838](https://github.com/user-attachments/assets/c1b32a77-62d3-4e5b-a505-b40a10e3359c) 
+<일정>
+
+
+![IMG_9839](https://github.com/user-attachments/assets/01001c3b-d1ba-467c-86e2-495b455b6c7b)
+<팀원역할>
+
+## 참고문헌
+
+https://newautopost.co.kr/issue-plus/article/123221/
+     <연구배경 참고 문헌(뉴스 기사)> - new auto post
+     
+https://it.chosun.com/news/articleView.html?idxno=2023092119030
+     <관련 기술의 현황(뉴스 기사)> - IT조선
+     
+https://mobilitytv.co.kr/report/article/49954/
+     <급발진 확인장치 만든 이유(사례)> - M mobility
+     
+https://www.instructables.com/Arduino-pressure-sensor-FSR-with-LCD-display/
+     <아두이노 압력센서를 이용한 LCD 화면> - Autodesk Instructables(by NickW8)
+
+
+
+
 
