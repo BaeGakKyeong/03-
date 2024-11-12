@@ -142,3 +142,7 @@ SCL 핀: Arduino Mega의  21번 핀에 연결
 https://github.com/user-attachments/assets/0fdd80c9-c11d-4a1a-8cf7-d808dc06f086
 
 
+SD카드에 저장된 모습
+
+![IMG_9834](https://github.com/user-attachments/assets/810f51f4-d64d-47e6-aaa0-847689e176b6)
+
