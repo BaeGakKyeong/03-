@@ -50,15 +50,15 @@
 
 
 ## 목표
-   1.자동차의 각각의 페달에 압력센서 부착
+     1.자동차의 각각의 페달에 압력센서 부착
 
-   2.압력 센서에 가해진 압력의 정도를 측정 및 기록
+     2.압력 센서에 가해진 압력의 정도를 측정 및 기록
 
         2-1.(사고 방지 목적) 압력센서에 압력이 가해질 시, 각각의 심볼이나 문자를 LCD모듈을 통해 출력
 
         2-2.(사고 증명 목적) 압력센서에 가해진 압력을 시간대별로 기록해, 누구나 보기 쉽도록 설계함.
 
-   3.법률전문가나 일반 운전자가 확인하기 쉽게 설계해, 제조사 종속성을 줄인다.
+     3.법률전문가나 일반 운전자가 확인하기 쉽게 설계해, 제조사 종속성을 줄인다.
 
 
 
@@ -73,34 +73,72 @@
 
 Wokwi 구현 내용
 
+![IMG_9836](https://github.com/user-attachments/assets/6454ca42-fafa-4ad9-9bbb-d5cdb2a22cda)
+<전체 회로도(압력센서 --> 포션스미터 대체)>
 
 
 ## 구현방법
-6. 구현 방법
+
 (1) 필요한 부품
+
 ● Arduino Mega (아두이노 메가)
+
 ● FSR402 압력센서
+
 ● SD카드 리더기 MPL115A2
+
 ● DS3231 RTC Modue 시계 모듈
+
 ● SD카드 4GB
+
 ● 브레드보드
+
 ● 점퍼케이블
+
 ● LCD 모듈 20 x 4
+
 ● 전원 공급장치
 
+
+
 (2) 회로 구성 설명
+
 FSR-402 압력 센서
+
 FSR 센서의 한쪽 단자: Arduino Mega의 A0,A1  핀에 연결
+
 FSR 센서의 다른 단자: GND에 연결
+
 SD 카드 모듈
+
 CS 핀: Arduino Mega의 디지털4번 핀에 연결
+
 MOSI 핀: Arduino Mega의  51번 핀에 연결
+
 MISO 핀: Arduino Mega의  50번 핀에 연결
+
 SCK 핀: Arduino Mega의  52번 핀에 연결
+
 VCC 핀: 5V에 연결
+
 GND 핀: GND에 연결
+
 DS3231 RTC 모듈
+
 VCC 핀: 5V에 연결
+
 GND 핀: GND에 연결
+
 SDA 핀: Arduino Mega의  20번 핀에 연결
+
 SCL 핀: Arduino Mega의  21번 핀에 연결
+
+실제 회로도
+
+![IMG_9837](https://github.com/user-attachments/assets/601eb97a-922f-4653-b438-2a69d09d7db9)
+
+작동 영상
+
+https://github.com/user-attachments/assets/0fdd80c9-c11d-4a1a-8cf7-d808dc06f086
+
+
