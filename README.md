@@ -138,7 +138,7 @@ SCL 핀: Arduino Mega의  21번 핀에 연결
 실제 회로도
 
 ![IMG_9837](https://github.com/user-attachments/assets/601eb97a-922f-4653-b438-2a69d09d7db9)
-<구현 회로도>
+<구현 회로도(pressing_sonsor.ino참조)>
 
 작동 영상
 
@@ -148,7 +148,7 @@ https://github.com/user-attachments/assets/0fdd80c9-c11d-4a1a-8cf7-d808dc06f086
 SD카드에 저장된 모습
 
 ![IMG_9834](https://github.com/user-attachments/assets/810f51f4-d64d-47e6-aaa0-847689e176b6)
-<SD카드>
+<SD카드(display_LCD.ino참조)>
 
 
 
