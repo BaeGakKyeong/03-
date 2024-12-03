@@ -12,9 +12,10 @@
 - [4. 목표](#목표)
 - [5. 내용](#내용)
 - [6. 구현 방법](#구현방법)
-- [7. 일정 및 팀원 역할](#일정_및_팀원역할)
-- [8. 연구_중_문제와_해결](#문제_및_해결)
-- [9. 참고문헌](#참고문헌)
+- [7. 실제 구현](#실제구현)
+- [8. 일정 및 팀원 역할](#일정_및_팀원역할)
+- [9. 연구_중_문제와_해결](#문제_및_해결)
+- [10. 참고문헌](#참고문헌)
 
 
 ## 연구배경_및_필요성  
@@ -148,21 +149,52 @@ SDA 핀: Arduino Mega의  20번 핀에 연결
 
 SCL 핀: Arduino Mega의  21번 핀에 연결
 
-실제 회로도
+
+
+## 실제구현
+
 박기범
 
-![IMG_9837](https://github.com/user-attachments/assets/601eb97a-922f-4653-b438-2a69d09d7db9)
-<구현 회로도(pressing_sonsor.ino참조)>
+
+![KakaoTalk_20241203_135626283](https://github.com/user-attachments/assets/bb296442-1719-4d1f-90e6-d67473dd74dd)
+
+<사진 1>  압력센서를 통해 압력을 입력받는다
+
+
+
+![KakaoTalk_20241203_135626283_01](https://github.com/user-attachments/assets/8a6ec7e1-1fe8-4295-b09c-d2b5783f30d4)
+
+
+<사진 2>  SD카드를 연결해 데이터를 저장 및 기록한다
+
+
+
+![KakaoTalk_20241203_135626283_03](https://github.com/user-attachments/assets/c6f231f9-a7f7-482c-a14d-e5a3fb361f5d)
+
+<사진 3> RTC모듈로 실제 시간을 전달받아 LCD모듈과 SD모듈에 전달한다
+
+
+
+![KakaoTalk_20241203_135626283_02](https://github.com/user-attachments/assets/deb16a4b-2785-49cb-bbde-30eff86dbbc3)
+
+<사진 4>  LCD모듈을 통해 현재 시간과 압력센서값을 출력한다
+
+
+
+
+
 
 작동 영상
 
 https://github.com/user-attachments/assets/0fdd80c9-c11d-4a1a-8cf7-d808dc06f086
 
 
+
 SD카드에 저장된 모습
 
 ![IMG_9834](https://github.com/user-attachments/assets/810f51f4-d64d-47e6-aaa0-847689e176b6)
 <SD카드(display_LCD.ino참조)>
+
 
 날짜별 SD데이터 파일 생성
 김채환
